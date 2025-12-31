@@ -27,7 +27,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["https://insights-frontend-c85m.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

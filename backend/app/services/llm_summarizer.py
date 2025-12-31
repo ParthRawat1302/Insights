@@ -27,25 +27,25 @@ def summarize_insights(insights: List[dict]) -> Optional[str]:
     #     return None
 
 
-def _build_prompt(insight_text: str) -> str:
-    return (
-        "You are a data analyst assistant.\n"
-        "Summarize the following analytical insights in a concise, "
-        "professional tone suitable for a business dashboard.\n"
-        "Do not introduce new facts or assumptions.\n\n"
-        "Insights:\n"
-        f"{insight_text}\n\n"
-        "Summary (2–3 sentences):"
-    )
+# def _build_prompt(insight_text: str) -> str:
+#     return (
+#         "You are a data analyst assistant.\n"
+#         "Summarize the following analytical insights in a concise, "
+#         "professional tone suitable for a business dashboard.\n"
+#         "Do not introduce new facts or assumptions.\n\n"
+#         "Insights:\n"
+#         f"{insight_text}\n\n"
+#         "Summary (2–3 sentences):"
+#     )
 
 
-def _get_client() -> Optional[cohere.Client]:
-    global _client
+# def _get_client() -> Optional[cohere.Client]:
+#     global _client
 
-    if not settings.COHERE_API_KEY:
-        return None
+#     if not settings.COHERE_API_KEY:
+#         return None
 
-    if _client is None:
-        _client = cohere.Client(settings.COHERE_API_KEY)
+#     if _client is None:
+#         _client = cohere.Client(settings.COHERE_API_KEY)
 
-    return _client
+#     return _client

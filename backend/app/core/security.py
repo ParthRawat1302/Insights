@@ -11,11 +11,25 @@ pwd_context = CryptContext(
     deprecated="auto"
 )
 
+MAX_BCRYPT_BYTES = 72
+
+def _normalize_password(password: str) -> str:
+    if not password:
+        return password
+
+    pwd_bytes = password.encode("utf-8")
+
+    if len(pwd_bytes) > MAX_BCRYPT_BYTES:
+        pwd_bytes = pwd_bytes[:MAX_BCRYPT_BYTES]
+
+    return pwd_bytes.decode("utf-8", errors="ignore")
+
 def hash_password(password: str) -> str:
-    print("Hashing password")
+    password = _normalize_password(password)
     return pwd_context.hash(password)
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
+    plain_password = _normalize_password(plain_password)
     return pwd_context.verify(plain_password, hashed_password)
 
 def create_access_token(
@@ -34,13 +48,11 @@ def create_access_token(
         "exp": expire
     }
 
-    encoded_jwt = jwt.encode(
+    return jwt.encode(
         payload,
         settings.JWT_SECRET_KEY,
         algorithm=settings.JWT_ALGORITHM
     )
-
-    return encoded_jwt
 
 def decode_access_token(token: str) -> Optional[str]:
     try:

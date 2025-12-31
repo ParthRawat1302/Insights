@@ -1,10 +1,3 @@
-from typing import List, Optional
-import cohere
-
-from app.core.config import settings
-
-_client: Optional[cohere.Client] = None
-
 
 def summarize_insights(insights: List[dict]) -> Optional[str]:
     return "Temporarily disabled summarization"

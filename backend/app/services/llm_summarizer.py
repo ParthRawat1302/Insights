@@ -1,4 +1,4 @@
-
+from typing import List, Optional
 def summarize_insights(insights: List[dict]) -> Optional[str]:
     return "Temporarily disabled summarization"
     # client = _get_client()

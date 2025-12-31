@@ -8,3 +8,4 @@ pymongo==4.15.5
 python_jose==3.5.0
 gunicorn
 uvicorn[standard]
+email-validator

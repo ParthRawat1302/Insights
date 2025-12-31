@@ -1,0 +1,58 @@
+{
+  "dataset_id": "2f0eb82b-65fa-4cfd-b99c-63adaa1562dc",
+  "insights": [
+    {
+      "type": "trend",
+      "message": "quantity shows an upward trend over time"
+    },
+    {
+      "type": "trend",
+      "message": "unit_price shows an upward trend over time"
+    },
+    {
+      "type": "trend",
+      "message": "total_amount shows a downward trend over time"
+    },
+    {
+      "type": "data_distribution",
+      "message": "Column 'order_id' has high cardinality"
+    },
+    {
+      "type": "data_distribution",
+      "message": "Column 'order_date' has high cardinality"
+    },
+    {
+      "type": "data_distribution",
+      "message": "Column 'quantity' has high cardinality"
+    },
+    {
+      "type": "data_distribution",
+      "message": "Column 'unit_price' has high cardinality"
+    },
+    {
+      "type": "data_distribution",
+      "message": "Column 'total_amount' has high cardinality"
+    },
+    {
+      "type": "kpi",
+      "message": "Max Order Id is 1010.0"
+    },
+    {
+      "type": "kpi",
+      "message": "Max Quantity is 6.0"
+    },
+    {
+      "type": "kpi",
+      "message": "Max Unit Price is 52000.0"
+    },
+    {
+      "type": "kpi",
+      "message": "Max Discount is 0.2"
+    },
+    {
+      "type": "kpi",
+      "message": "Max Total Amount is 76000.0"
+    }
+  ],
+  "summary": "Temporarily disabled summarization"
+}

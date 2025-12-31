@@ -1,0 +1,42 @@
+{
+  "order_id": {
+    "type": "numeric",
+    "nullable": false,
+    "cardinality": "high"
+  },
+  "order_date": {
+    "type": "datetime",
+    "nullable": false,
+    "cardinality": "high"
+  },
+  "customer_id": {
+    "type": "text",
+    "nullable": false,
+    "cardinality": "low"
+  },
+  "product_category": {
+    "type": "text",
+    "nullable": false,
+    "cardinality": "low"
+  },
+  "quantity": {
+    "type": "numeric",
+    "nullable": false,
+    "cardinality": "high"
+  },
+  "unit_price": {
+    "type": "numeric",
+    "nullable": false,
+    "cardinality": "high"
+  },
+  "discount": {
+    "type": "numeric",
+    "nullable": false,
+    "cardinality": "low"
+  },
+  "total_amount": {
+    "type": "numeric",
+    "nullable": false,
+    "cardinality": "high"
+  }
+}

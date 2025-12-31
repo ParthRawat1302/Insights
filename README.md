@@ -1,5 +1,5 @@
 # Insights - Backend-Driven Analytics Platform
-
+Live URL:-https://insights-frontend-v2n9.onrender.com/login
 A minimal, production-ready frontend for a data analytics platform that is fully integrated with a FastAPI backend. This is a **thin client** - all analytics logic, dashboard generation, and insights are driven by the backend.
 
 ## Architecture Principle
